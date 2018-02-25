@@ -35,7 +35,7 @@ namespace csharp_example
             driver.FindElement(By.XPath("//*[@id='app']/div/div/div[1]/div[1]/div/div/div[1]/div[1]/div[2]/a")).Click();
 
             // Заполнение лид формы внизу страницы
-
+            System.Threading.Thread.Sleep(5000);
             //Имя (Клик и Заполнение)
             driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div[1]/div/input")).Click();
             driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div[1]/div/input")).SendKeys("Андрей");
@@ -63,6 +63,16 @@ namespace csharp_example
             System.Threading.Thread.Sleep(1000);
             // Кнопка Далее
             driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[6]/div/button")).Click();
+
+            // Задержка
+            System.Threading.Thread.Sleep(5000);
+
+            // Код из СМС (Ввести в поле)
+            driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div[3]/div/input")).Click();
+            driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div[3]/div/input")).SendKeys("1221");
+
+            // Кнопка подтвердить
+            driver.FindElement(By.XPath("//*[@id='app']/div/div/div[3]/div[1]/div[6]/div/div/div/div[2]/div[2]/div[5]/div[2]/button")).Click();
 
             // driver.FindElement(By.XPath(""));
 
